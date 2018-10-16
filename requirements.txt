@@ -7,6 +7,7 @@ Flask-Jsonpify==1.5.0
 flask-marshmallow==0.9.0
 Flask-RESTful==0.3.6
 Flask-SQLAlchemy==2.3.2
+foreman==0.9.7
 gunicorn==19.9.0
 itsdangerous==0.24
 Jinja2==2.10
@@ -15,6 +16,7 @@ marshmallow==2.16.0
 marshmallow-sqlalchemy==0.14.1
 pytz==2018.5
 requests==0.11.1
+requests-futures==0.9.7
 six==1.11.0
 SQLAlchemy==1.2.12
 Werkzeug==0.14.1
