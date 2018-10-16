@@ -1,1 +1,1 @@
-web: python crud.py $PORT
+web: gunicorn -w 4 app:crud
