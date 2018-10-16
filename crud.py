@@ -84,11 +84,6 @@ def user_delete(id):
     return user_schema.jsonify(user)
 
 
-@app.route("/", methods=["GET"])
-def get_user():
-    return "Hello world"
-
-
 if __name__ == '__main__':
     app.run(debug=True)
 
