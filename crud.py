@@ -52,6 +52,10 @@ def get_user():
     result = users_schema.dump(all_users)
     return jsonify(result.data)
 
+@app.route("/", methods=["GET"])
+def get():
+    return "Hello world :)"
+
 
 # endpoint to get user detail by id
 @app.route("/user/<id>", methods=["GET"])
