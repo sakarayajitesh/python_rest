@@ -1,1 +1,1 @@
-web: gunicorn -w 4 crud:crud
+web: python crud.py
