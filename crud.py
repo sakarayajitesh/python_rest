@@ -13,18 +13,20 @@ ma = Marshmallow(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True)
-    email = db.Column(db.String(120), unique=True)
+    title = db.Column(db.TEXT,unique=True)
+    text = db.Column(db.TEXT)
+    image = db.Column(db.TEXT)
 
-    def __init__(self, username, email):
-        self.username = username
-        self.email = email
+    def __init__(self, title, text,image):
+        self.title = title
+        self.text = text
+        self.image = image
 
 
 class UserSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('username', 'email')
+        fields = ('title', 'text','image')
 
 
 user_schema = UserSchema()
@@ -34,8 +36,8 @@ users_schema = UserSchema(many=True)
 # endpoint to create new user
 @app.route("/user", methods=["POST"])
 def add_user():
-    username = request.json['username']
-    email = request.json['email']
+    username = request.json['title']
+    email = request.json['text']
 
     new_user = User(username, email)
 
@@ -46,11 +48,12 @@ def add_user():
 
 
 # endpoint to show all users
-@app.route("/user", methods=["GET"])
+@app.route("/tips", methods=["GET"])
 def get_user():
     all_users = User.query.all()
     result = users_schema.dump(all_users)
     return jsonify(result.data)
+
 
 @app.route("/", methods=["GET"])
 def get():
