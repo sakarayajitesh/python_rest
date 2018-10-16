@@ -14,23 +14,24 @@ ma = Marshmallow(app)
 class News(db.Model):
     __tablename__ = 'news'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.TEXT,unique=True)
+    title = db.Column(db.TEXT, unique=True)
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
 
-    def __init__(self, title, text,image):
+    def __init__(self, title, text, image):
         self.title = title
         self.text = text
         self.image = image
 
+
 class Tips(db.Model):
     __tablename__ = 'tips'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.TEXT,unique=True)
+    title = db.Column(db.TEXT, unique=True)
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
 
-    def __init__(self, title, text,image):
+    def __init__(self, title, text, image):
         self.title = title
         self.text = text
         self.image = image
@@ -39,11 +40,11 @@ class Tips(db.Model):
 class Videos(db.Model):
     __tablename__ = 'videos'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.TEXT,unique=True)
+    title = db.Column(db.TEXT, unique=True)
     text = db.Column(db.TEXT)
     videoId = db.Column(db.TEXT)
 
-    def __init__(self, title, text,videoid):
+    def __init__(self, title, text, videoid):
         self.title = title
         self.text = text
         self.videoId = videoid
@@ -52,13 +53,13 @@ class Videos(db.Model):
 class UserSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('id','title', 'text','image')
+        fields = ('id', 'title', 'text', 'image')
 
 
 class VideosSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('id','title', 'text','videoId')
+        fields = ('id', 'title', 'text', 'videoId')
 
 
 user_schema = UserSchema()
@@ -106,9 +107,9 @@ def get_videos():
     return jsonify(result.data)
 
 
-@app.route("/", methods=["GET"])
+@app.route("/imahurt", methods=["GET"])
 def get():
-    return "Hello world :)\n Try these :\n [url]/tips\n [url]/news\n [url]/videos "
+    return "minginav ley"
 
 
 # endpoint to get user detail by id
@@ -146,5 +147,3 @@ if __name__ == '__main__':
     #app.run(debug=True)
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
-
-
