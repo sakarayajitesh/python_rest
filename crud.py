@@ -108,7 +108,7 @@ def get_videos():
 
 @app.route("/", methods=["GET"])
 def get():
-    return "Hello world :)"
+    return "Hello world :)\n Try these :\n [url]/tips\n [url]/news\n [url]/videos "
 
 
 # endpoint to get user detail by id
