@@ -4,6 +4,7 @@
     <list default="true" id="22a48ef5-0826-42dc-b6df-a9c039f3b468" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/crud.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/python_rest$app.coverage" NAME="app Coverage Results" MODIFIED="1539666604405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_rest$crud.coverage" NAME="crud Coverage Results" MODIFIED="1539691964486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_rest$crud.coverage" NAME="crud Coverage Results" MODIFIED="1539759051306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -33,11 +34,12 @@
     <session id="513427302">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,7 +64,7 @@
           <entry key="Procfile" value="37" />
           <entry key="Python Console" value="24" />
           <entry key="env" value="11" />
-          <entry key="py" value="656" />
+          <entry key="py" value="1193" />
           <entry key="sql" value="37" />
           <entry key="txt" value="34" />
         </counts>
@@ -71,7 +73,7 @@
         <counts>
           <entry key=".env file" value="11" />
           <entry key="PLAIN_TEXT" value="71" />
-          <entry key="Python" value="680" />
+          <entry key="Python" value="1217" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -84,10 +86,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+            <state relative-caret-position="-884">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <marker date="1539758519890" expanded="true" signature="602:608" ph="..." />
+                <marker date="1539758519890" expanded="true" signature="1443:1452" ph="..." />
               </folding>
             </state>
           </provider>
@@ -265,20 +268,26 @@
       <option name="project" value="LOCAL" />
       <updated>1539692216821</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="* add details">
+      <created>1539693069366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539693069366</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23154363" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23489933" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19971672" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30169973" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -289,6 +298,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.47733712" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -325,13 +335,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/var.env" />
     <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -355,10 +359,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        <state relative-caret-position="-884">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1539758519890" expanded="true" signature="602:608" ph="..." />
+            <marker date="1539758519890" expanded="true" signature="1443:1452" ph="..." />
           </folding>
         </state>
       </provider>

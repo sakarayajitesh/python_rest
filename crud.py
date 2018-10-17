@@ -18,10 +18,11 @@ class News(db.Model):
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
 
+
     def __init__(self, title, text, image):
-        self.title = title
-        self.text = text
         self.image = image
+        self.text = text
+        self.title = title
 
 
 class Tips(db.Model):
@@ -32,8 +33,8 @@ class Tips(db.Model):
     image = db.Column(db.TEXT)
 
     def __init__(self, title, text, image):
-        self.title = title
         self.text = text
+        self.title = title
         self.image = image
 
 
@@ -53,7 +54,8 @@ class Videos(db.Model):
 class UserSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('id', 'title', 'text', 'image')
+        #fields = ('id','title', 'text')
+        fields = ('id','title','text','image')
 
 
 class VideosSchema(ma.Schema):
@@ -71,18 +73,34 @@ videos_schema = VideosSchema(many=True)
 
 
 # endpoint to create new user
-# @app.route("/user", methods=["POST"])
-# def add_user():
-#     username = request.json['title']
-#     email = request.json['text']
-#     image = request.json['image']
-#
-#     new_user = User(username, email,image)
-#
-#     db.session.add(new_user)
-#     db.session.commit()
-#
-#     return user_schema.jsonify(new_user)
+@app.route("/news", methods=["POST"])
+def add_news():
+    __tablename__ = 'news'
+    title = request.json['title']
+    text = request.json['text']
+    image = request.json['image']
+
+    new_news = News(title, text, image)
+
+    db.session.add(new_news)
+    db.session.commit()
+
+    return user_schema.jsonify(new_news)
+
+
+@app.route("/tips", methods=["POST"])
+def add_tips():
+    __tablename__ = 'tips'
+    title = request.json['title']
+    text = request.json['text']
+    image = request.json['image']
+
+    new_tip = Tips(title, text, image)
+
+    db.session.add(new_tip)
+    db.session.commit()
+
+    return user_schema.jsonify(new_tip)
 
 
 # endpoint to show all users
@@ -107,9 +125,9 @@ def get_videos():
     return jsonify(result.data)
 
 
-@app.route("/imahurt", methods=["GET"])
+@app.route("/", methods=["GET"])
 def get():
-    return "minginav ley"
+    return "Hello world"
 
 
 # endpoint to get user detail by id
@@ -134,16 +152,16 @@ def get():
 
 
 # endpoint to delete user
-# @app.route("/user/<id>", methods=["DELETE"])
-# def user_delete(id):
-#     user = User.query.get(id)
-#     db.session.delete(user)
-#     db.session.commit()
-#
-#     return user_schema.jsonify(user)
+@app.route("/tips/<id>", methods=["DELETE"])
+def tip_delete(id):
+    tip = Tips.query.get(id)
+    db.session.delete(tip)
+    db.session.commit()
+
+    return user_schema.jsonify(tip)
 
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    app.run(debug=True)
+    # port = int(os.environ.get("PORT", 5000))
+    # app.run(debug=True, host='0.0.0.0', port=port)
