@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="22a48ef5-0826-42dc-b6df-a9c039f3b468" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +63,7 @@
           <entry key="Procfile" value="37" />
           <entry key="Python Console" value="24" />
           <entry key="env" value="11" />
-          <entry key="py" value="1193" />
+          <entry key="py" value="1194" />
           <entry key="sql" value="37" />
           <entry key="txt" value="56" />
         </counts>
@@ -71,7 +72,7 @@
         <counts>
           <entry key=".env file" value="11" />
           <entry key="PLAIN_TEXT" value="93" />
-          <entry key="Python" value="1217" />
+          <entry key="Python" value="1218" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -84,11 +85,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+            <state relative-caret-position="264">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
               <folding>
-                <marker date="1539758519890" expanded="true" signature="602:608" ph="..." />
-                <marker date="1539758519890" expanded="true" signature="1443:1452" ph="..." />
+                <marker date="1539760354870" expanded="true" signature="602:608" ph="..." />
+                <marker date="1539760354870" expanded="true" signature="1443:1452" ph="..." />
               </folding>
             </state>
           </provider>
@@ -280,11 +281,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539759987182</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="* added 10 tips">
+      <created>1539760207944</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1539760207944</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23489933" />
@@ -365,11 +373,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+        <state relative-caret-position="264">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
           <folding>
-            <marker date="1539758519890" expanded="true" signature="602:608" ph="..." />
-            <marker date="1539758519890" expanded="true" signature="1443:1452" ph="..." />
+            <marker date="1539760354870" expanded="true" signature="602:608" ph="..." />
+            <marker date="1539760354870" expanded="true" signature="1443:1452" ph="..." />
           </folding>
         </state>
       </provider>
