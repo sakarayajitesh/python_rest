@@ -14,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/python_rest$app.coverage" NAME="app Coverage Results" MODIFIED="1539666604405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_rest$crud.coverage" NAME="crud Coverage Results" MODIFIED="1540194071113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_rest$crud.coverage" NAME="crud Coverage Results" MODIFIED="1540210867792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -48,7 +48,7 @@
           <entry key="Procfile" value="4" />
           <entry key="env" value="1" />
           <entry key="procfile" value="1" />
-          <entry key="py" value="4" />
+          <entry key="py" value="6" />
           <entry key="sql" value="4" />
           <entry key="txt" value="3" />
         </counts>
@@ -56,7 +56,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="4" />
+          <entry key="Python" value="6" />
           <entry key="Scratch" value="4" />
         </counts>
       </usages-collector>
@@ -65,7 +65,7 @@
           <entry key="Procfile" value="37" />
           <entry key="Python Console" value="24" />
           <entry key="env" value="11" />
-          <entry key="py" value="1414" />
+          <entry key="py" value="3246" />
           <entry key="sql" value="37" />
           <entry key="txt" value="74" />
         </counts>
@@ -74,7 +74,7 @@
         <counts>
           <entry key=".env file" value="11" />
           <entry key="PLAIN_TEXT" value="111" />
-          <entry key="Python" value="1438" />
+          <entry key="Python" value="3270" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -87,11 +87,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1583">
-              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="155">
+              <caret line="222" column="14" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
               <folding>
-                <marker date="1540194070985" expanded="true" signature="639:645" ph="..." />
-                <marker date="1540194070985" expanded="true" signature="1532:1541" ph="..." />
+                <element signature="e#0#41#0" expanded="true" />
+                <marker date="1540211135321" expanded="true" signature="423:426" ph="..." />
+                <marker date="1540211135321" expanded="true" signature="684:690" ph="..." />
+                <marker date="1540211135321" expanded="true" signature="1588:1672" ph="..." />
+                <marker date="1540211135321" expanded="true" signature="1716:1725" ph="..." />
+                <marker date="1540211135321" expanded="true" signature="2180:2213" ph="..." />
+                <marker date="1540211135321" expanded="true" signature="4593:5774" ph="..." />
               </folding>
             </state>
           </provider>
@@ -311,11 +316,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540193015666</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="* trying to add news">
+      <created>1540194354609</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1540194354609</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23825504" />
@@ -323,7 +335,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.203966" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23229462" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -395,13 +407,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/flask_sqlalchemy/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="2308" selection-start-line="2308" selection-end-line="2308" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1583">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+        <state relative-caret-position="155">
+          <caret line="222" column="14" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
           <folding>
-            <marker date="1540194070985" expanded="true" signature="639:645" ph="..." />
-            <marker date="1540194070985" expanded="true" signature="1532:1541" ph="..." />
+            <element signature="e#0#41#0" expanded="true" />
+            <marker date="1540211135321" expanded="true" signature="423:426" ph="..." />
+            <marker date="1540211135321" expanded="true" signature="684:690" ph="..." />
+            <marker date="1540211135321" expanded="true" signature="1588:1672" ph="..." />
+            <marker date="1540211135321" expanded="true" signature="1716:1725" ph="..." />
+            <marker date="1540211135321" expanded="true" signature="2180:2213" ph="..." />
+            <marker date="1540211135321" expanded="true" signature="4593:5774" ph="..." />
           </folding>
         </state>
       </provider>

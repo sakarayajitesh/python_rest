@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+import random
+import json
 import os
 
 app = Flask(__name__)
@@ -11,6 +13,7 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 
+
 class News(db.Model):
     __tablename__ = 'news'
     id = db.Column(db.Integer, primary_key=True)
@@ -18,6 +21,8 @@ class News(db.Model):
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
     detail_text = db.Column(db.TEXT)
+    category = 1
+
 
 
     def __init__(self, title, text, image, detail_text):
@@ -33,11 +38,14 @@ class Tips(db.Model):
     title = db.Column(db.TEXT, unique=True)
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
+    category = 0
 
     def __init__(self, title, text, image):
         self.text = text
         self.title = title
         self.image = image
+
+
 
 
 class Videos(db.Model):
@@ -46,6 +54,8 @@ class Videos(db.Model):
     title = db.Column(db.TEXT, unique=True)
     text = db.Column(db.TEXT)
     videoId = db.Column(db.TEXT)
+    category = 2
+
 
     def __init__(self, title, text, videoid):
         self.title = title
@@ -53,11 +63,18 @@ class Videos(db.Model):
         self.videoId = videoid
 
 
+class SeqCount():
+
+    def __init__(self,name,seq):
+        self.name = name
+        self.seq = seq
+
+
 class UserSchema(ma.Schema):
     class Meta:
         # Fields to expose
         #fields = ('id','title', 'text')
-        fields = ('id', 'title', 'text', 'image')
+        fields = ('category','id', 'title', 'text', 'image')
 
 
 class NewsDetailSchema(ma.Schema):
@@ -71,6 +88,12 @@ class VideosSchema(ma.Schema):
         # Fields to expose
         fields = ('id', 'title', 'text', 'videoId')
 
+class Sc(ma.Schema):
+    class meta:
+        fields = ('seq')
+
+sc = Sc()
+sce = Sc(many=True)
 
 new_detail_schema = NewsDetailSchema()
 news_detail_schema = NewsDetailSchema(many=True)
@@ -173,6 +196,48 @@ def tip_delete(id):
 
     return user_schema.jsonify(tip)
 
+
+@app.route("/home",methods=["GET"])
+def get_home():
+    result = db.engine.execute("select * from sqlite_sequence")
+    names = []
+    jsonObject = []
+    testArray = [
+        {'a':1},
+        {'b':1},
+        {'c':1},
+        {'d':1},
+    ]
+    for row in result:
+        names.append(SeqCount(row[0],row[1]))
+
+    for q in names:
+        if q.name == 'tips':
+            rnd = random.randint(1,int(q.seq))
+            jsonObject.append({
+                'id': Tips.query.get(rnd).id,
+                'title': Tips.query.get(rnd).title,
+                'text': Tips.query.get(rnd).text,
+                'category': Tips.query.get(rnd).category,
+                'image': Tips.query.get(rnd).image
+            })
+            # print(type(user_schema.jsonify(Tips.query.get(rnd))))
+            # jsonObject.append(user_schema.jsonify(Tips.query.get(rnd)))
+
+        elif q.name == 'news':
+            rnd = random.randint(1,int(q.seq))
+            jsonObject.append({
+                'id': News.query.get(rnd).id,
+                'title': News.query.get(rnd).title,
+                'text': News.query.get(rnd).text,
+                'category': News.query.get(rnd).category,
+                'image': News.query.get(rnd).image
+            })
+
+    # print(result)
+
+
+    return json.dumps(jsonObject)
 
 if __name__ == '__main__':
     #app.run(debug=True)
