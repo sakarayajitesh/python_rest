@@ -202,12 +202,7 @@ def get_home():
     result = db.engine.execute("select * from sqlite_sequence")
     names = []
     jsonObject = []
-    testArray = [
-        {'a':1},
-        {'b':1},
-        {'c':1},
-        {'d':1},
-    ]
+
     for row in result:
         names.append(SeqCount(row[0],row[1]))
 
