@@ -4,7 +4,6 @@
     <list default="true" id="22a48ef5-0826-42dc-b6df-a9c039f3b468" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/crud.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/python_rest$app.coverage" NAME="app Coverage Results" MODIFIED="1539666604405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_rest$crud.coverage" NAME="crud Coverage Results" MODIFIED="1540210867792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_rest$crud.coverage" NAME="crud Coverage Results" MODIFIED="1540211789474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -65,7 +64,7 @@
           <entry key="Procfile" value="37" />
           <entry key="Python Console" value="24" />
           <entry key="env" value="11" />
-          <entry key="py" value="3246" />
+          <entry key="py" value="3262" />
           <entry key="sql" value="37" />
           <entry key="txt" value="74" />
         </counts>
@@ -74,7 +73,7 @@
         <counts>
           <entry key=".env file" value="11" />
           <entry key="PLAIN_TEXT" value="111" />
-          <entry key="Python" value="3270" />
+          <entry key="Python" value="3286" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -87,16 +86,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="222" column="14" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
+            <state relative-caret-position="43">
+              <caret line="223" column="45" selection-start-line="223" selection-start-column="45" selection-end-line="223" selection-end-column="45" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1540211135321" expanded="true" signature="423:426" ph="..." />
-                <marker date="1540211135321" expanded="true" signature="684:690" ph="..." />
-                <marker date="1540211135321" expanded="true" signature="1588:1672" ph="..." />
-                <marker date="1540211135321" expanded="true" signature="1716:1725" ph="..." />
-                <marker date="1540211135321" expanded="true" signature="2180:2213" ph="..." />
-                <marker date="1540211135321" expanded="true" signature="4593:5774" ph="..." />
+                <marker date="1540211699624" expanded="true" signature="423:426" ph="..." />
+                <marker date="1540211699624" expanded="true" signature="684:690" ph="..." />
+                <marker date="1540211699624" expanded="true" signature="1588:1672" ph="..." />
+                <marker date="1540211699624" expanded="true" signature="1716:1725" ph="..." />
+                <marker date="1540211699624" expanded="true" signature="2180:2213" ph="..." />
+                <marker date="1540211699624" expanded="true" signature="4593:5928" ph="..." />
               </folding>
             </state>
           </provider>
@@ -323,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540194354609</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="* trying to add news">
+      <created>1540211248692</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1540211248692</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -423,16 +429,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="222" column="14" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
+        <state relative-caret-position="43">
+          <caret line="223" column="45" selection-start-line="223" selection-start-column="45" selection-end-line="223" selection-end-column="45" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1540211135321" expanded="true" signature="423:426" ph="..." />
-            <marker date="1540211135321" expanded="true" signature="684:690" ph="..." />
-            <marker date="1540211135321" expanded="true" signature="1588:1672" ph="..." />
-            <marker date="1540211135321" expanded="true" signature="1716:1725" ph="..." />
-            <marker date="1540211135321" expanded="true" signature="2180:2213" ph="..." />
-            <marker date="1540211135321" expanded="true" signature="4593:5774" ph="..." />
+            <marker date="1540211699624" expanded="true" signature="423:426" ph="..." />
+            <marker date="1540211699624" expanded="true" signature="684:690" ph="..." />
+            <marker date="1540211699624" expanded="true" signature="1588:1672" ph="..." />
+            <marker date="1540211699624" expanded="true" signature="1716:1725" ph="..." />
+            <marker date="1540211699624" expanded="true" signature="2180:2213" ph="..." />
+            <marker date="1540211699624" expanded="true" signature="4593:5928" ph="..." />
           </folding>
         </state>
       </provider>
