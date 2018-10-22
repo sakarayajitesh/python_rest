@@ -20,10 +20,10 @@ class News(db.Model):
     detail_text = db.Column(db.TEXT)
 
 
-    def __init__(self, title, text, image,detail_text):
+    def __init__(self, title, text, image, detail_text):
         self.image = image
         self.text = text
-        self.detailText = detail_text
+        self.detail_text = detail_text
         self.title = title
 
 
@@ -60,10 +60,20 @@ class UserSchema(ma.Schema):
         fields = ('id', 'title', 'text', 'image')
 
 
+class NewsDetailSchema(ma.Schema):
+    class Meta:
+        # Fields to expose
+        fields = ('id', 'title', 'text', 'image','detail_text')
+
+
 class VideosSchema(ma.Schema):
     class Meta:
         # Fields to expose
         fields = ('id', 'title', 'text', 'videoId')
+
+
+new_detail_schema = NewsDetailSchema()
+news_detail_schema = NewsDetailSchema(many=True)
 
 
 user_schema = UserSchema()
@@ -134,10 +144,10 @@ def get():
 
 
 # endpoint to get user detail by id
-# @app.route("/user/<id>", methods=["GET"])
-# def user_detail(id):
-#     user = User.query.get(id)
-#     return user_schema.jsonify(user)
+@app.route("/news/<id>", methods=["GET"])
+def news_detail(id):
+    news_d = News.query.get(id)
+    return new_detail_schema.jsonify(news_d)
 
 
 # endpoint to update user
