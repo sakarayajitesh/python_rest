@@ -17,11 +17,13 @@ class News(db.Model):
     title = db.Column(db.TEXT, unique=True)
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
+    detail_text = db.Column(db.TEXT)
 
 
-    def __init__(self, title, text, image):
+    def __init__(self, title, text, image,detail_text):
         self.image = image
         self.text = text
+        self.detailText = detail_text
         self.title = title
 
 
@@ -55,7 +57,7 @@ class UserSchema(ma.Schema):
     class Meta:
         # Fields to expose
         #fields = ('id','title', 'text')
-        fields = ('id','title','text','image')
+        fields = ('id', 'title', 'text', 'image')
 
 
 class VideosSchema(ma.Schema):
@@ -79,8 +81,9 @@ def add_news():
     title = request.json['title']
     text = request.json['text']
     image = request.json['image']
+    detail_text = request.json['detail_text']
 
-    new_news = News(title, text, image)
+    new_news = News(title, text, image, detail_text)
 
     db.session.add(new_news)
     db.session.commit()
@@ -162,6 +165,6 @@ def tip_delete(id):
 
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    app.run(debug=True)
+    #port = int(os.environ.get("PORT", 5000))
+    #app.run(debug=True, host='0.0.0.0', port=port)
