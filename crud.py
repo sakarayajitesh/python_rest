@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import random
+from datetime import date
 import json
 import os
 
@@ -86,7 +87,7 @@ class NewsDetailSchema(ma.Schema):
 class VideosSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('id', 'title', 'text', 'videoId')
+        fields = ('category','id', 'title', 'text', 'videoId')
 
 class Sc(ma.Schema):
     class meta:
@@ -205,34 +206,40 @@ def get_home():
 
     for row in result:
         names.append(SeqCount(row[0],row[1]))
-
+    random.shuffle(names)
     for q in names:
         if q.name == 'tips':
             rnd = random.randint(1,int(q.seq))
-            jsonObject.append({
-                'id': Tips.query.get(rnd).id,
-                'title': Tips.query.get(rnd).title,
-                'text': Tips.query.get(rnd).text,
-                'category': Tips.query.get(rnd).category,
-                'image': Tips.query.get(rnd).image
-            })
-            # print(type(user_schema.jsonify(Tips.query.get(rnd))))
-            # jsonObject.append(user_schema.jsonify(Tips.query.get(rnd)))
+            # jsonObject.append({
+            #     'id': Tips.query.get(rnd).id,
+            #     'title': Tips.query.get(rnd).title,
+            #     'text': Tips.query.get(rnd).text,
+            #     'category': Tips.query.get(rnd).category,
+            #     'image': Tips.query.get(rnd).image
+            # })
+
+            #print(type(Tips.query.get(rnd)))
+            jsonObject.append(json.loads(user_schema.jsonify(Tips.query.get(rnd)).data.decode(encoding="ascii", errors="ignore")))
 
         elif q.name == 'news':
             rnd = random.randint(1,int(q.seq))
-            jsonObject.append({
-                'id': News.query.get(rnd).id,
-                'title': News.query.get(rnd).title,
-                'text': News.query.get(rnd).text,
-                'category': News.query.get(rnd).category,
-                'image': News.query.get(rnd).image
-            })
+            # jsonObject.append({
+            #     'id': News.query.get(rnd).id,
+            #     'title': News.query.get(rnd).title,
+            #     'text': News.query.get(rnd).text,
+            #     'category': News.query.get(rnd).category,
+            #     'image': News.query.get(rnd).image
+            # })
+            jsonObject.append(json.loads(user_schema.jsonify(News.query.get(rnd)).data.decode(encoding="ascii", errors="ignore")))
 
-    # print(result)
+        elif q.name=='videos':
+            rnd = random.randint(1,int(q.seq))
+            jsonObject.append(json.loads(video_schema.jsonify(Videos.query.get(rnd)).data.decode(encoding="ascii", errors="ignore")))
 
-
-    return json.dumps(jsonObject)
+    #return ''
+    #return jsonObject
+    #return json.dumps(jsonObject)
+    return jsonify(jsonObject)
 
 if __name__ == '__main__':
     #app.run(debug=True)
