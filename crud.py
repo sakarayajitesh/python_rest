@@ -56,12 +56,14 @@ class Videos(db.Model):
     text = db.Column(db.TEXT)
     videoId = db.Column(db.TEXT)
     category = 2
+    image = db.Column(db.TEXT)
 
 
     def __init__(self, title, text, videoid):
         self.title = title
         self.text = text
         self.videoId = videoid
+        self.image = 'https://i.ytimg.com/vi/'+videoid+'/hqdefault.jpg'
 
 
 class SeqCount():
@@ -87,7 +89,7 @@ class NewsDetailSchema(ma.Schema):
 class VideosSchema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ('category','id', 'title', 'text', 'videoId')
+        fields = ('category','id', 'title', 'text', 'videoId','image')
 
 class Sc(ma.Schema):
     class meta:
@@ -242,6 +244,6 @@ def get_home():
     return jsonify(jsonObject)
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    app.run(debug=True)
+    #port = int(os.environ.get("PORT", 5000))
+    #app.run(debug=True, host='0.0.0.0', port=port)
