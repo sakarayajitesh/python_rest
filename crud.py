@@ -2,9 +2,14 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import random
-from datetime import date
 import json
 import os
+from selenium.webdriver.chrome.options import Options
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -22,15 +27,17 @@ class News(db.Model):
     text = db.Column(db.TEXT)
     image = db.Column(db.TEXT)
     detail_text = db.Column(db.TEXT)
+    url = db.Column(db.TEXT)
     category = 1
 
 
 
-    def __init__(self, title, text, image, detail_text):
+    def __init__(self, title, text, image, detail_text,url):
         self.image = image
         self.text = text
         self.detail_text = detail_text
         self.title = title
+        self.url = url
 
 
 class Tips(db.Model):
@@ -79,6 +86,12 @@ class UserSchema(ma.Schema):
         #fields = ('id','title', 'text')
         fields = ('category','id', 'title', 'text', 'image')
 
+class NewsSchema(ma.Schema):
+    class Meta:
+        # Fields to expose
+        #fields = ('id','title', 'text')
+        fields = ('category','id', 'title', 'text', 'image','url')
+
 
 class NewsDetailSchema(ma.Schema):
     class Meta:
@@ -102,6 +115,10 @@ new_detail_schema = NewsDetailSchema()
 news_detail_schema = NewsDetailSchema(many=True)
 
 
+new_schema = NewsSchema()
+news_schema = NewsSchema(many=True)
+
+
 user_schema = UserSchema()
 users_schema = UserSchema(many=True)
 
@@ -118,6 +135,7 @@ def add_news():
     text = request.json['text']
     image = request.json['image']
     detail_text = request.json['detail_text']
+    url = request.json['url']
 
     new_news = News(title, text, image, detail_text)
 
@@ -153,7 +171,7 @@ def get_tips():
 @app.route("/news", methods=["GET"])
 def get_news():
     all_users = News.query.all()
-    result = users_schema.dump(all_users)
+    result = news_schema.dump(all_users)
     return jsonify(result.data)
 
 
@@ -164,9 +182,30 @@ def get_videos():
     return jsonify(result.data)
 
 
-@app.route("/", methods=["GET"])
+@app.route("/news/fetch", methods=["GET"])
 def get():
-    return "Hello world"
+    options = Options()
+    options.headless = True
+    driver = webdriver.Chrome(options=options, executable_path=r'.\chromedriver.exe')
+    driver.get("https://www.msn.com/en-in/foodanddrink/foodnews")
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'lxml')
+    driver.quit()
+    ul = soup.select("#maincontent .sectioncontent")
+    li = ul[1].find_all('li')
+    li = li[1:]
+    for i in li:
+        h =i.find_all('h3')
+        if len(h) > 0:
+            title = h[0].get_text()
+            image = json.loads(i.find_all('img')[0].get('data-src'))["default"].replace("//","https://").replace("h=64","h=640").replace("w=80","w=800")
+            url = "https://www.msn.com"+i.find_all('a')[0].get('href')
+            new_tip = News(title, "", image, "", url)
+            db.session.add(new_tip)
+            db.session.commit()
+            print("-------------------------------------------\n")
+
+    return "FETCHING DONE"
 
 
 # endpoint to get user detail by id
@@ -232,7 +271,7 @@ def get_home():
             #     'category': News.query.get(rnd).category,
             #     'image': News.query.get(rnd).image
             # })
-            jsonObject.append(json.loads(user_schema.jsonify(News.query.get(rnd)).data.decode(encoding="ascii", errors="ignore")))
+            jsonObject.append(json.loads(new_schema.jsonify(News.query.get(rnd)).data.decode(encoding="ascii", errors="ignore")))
 
         elif q.name=='videos':
             rnd = random.randint(1,int(q.seq))
