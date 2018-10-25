@@ -5,7 +5,6 @@ import random
 import json
 import os
 from selenium.webdriver.chrome.options import Options
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
@@ -52,8 +51,6 @@ class Tips(db.Model):
         self.text = text
         self.title = title
         self.image = image
-
-
 
 
 class Videos(db.Model):
@@ -194,18 +191,24 @@ def get():
     ul = soup.select("#maincontent .sectioncontent")
     li = ul[1].find_all('li')
     li = li[1:]
+    list_titles = db.engine.execute("select title from news")
+    titles = []
+    added = 0
+    for l in list_titles:
+        titles.append(l[0])
     for i in li:
         h =i.find_all('h3')
         if len(h) > 0:
             title = h[0].get_text()
-            image = json.loads(i.find_all('img')[0].get('data-src'))["default"].replace("//","https://").replace("h=64","h=640").replace("w=80","w=800")
-            url = "https://www.msn.com"+i.find_all('a')[0].get('href')
-            new_tip = News(title, "", image, "", url)
-            db.session.add(new_tip)
-            db.session.commit()
-            print("-------------------------------------------\n")
-
-    return "FETCHING DONE"
+            if title not in titles:
+                image = json.loads(i.find_all('img')[0].get('data-src'))["default"].replace("//","https://").replace("h=64","h=640").replace("w=80","w=800")
+                url = "https://www.msn.com"+i.find_all('a')[0].get('href')
+                new_tip = News(title, "", image, "", url)
+                db.session.add(new_tip)
+                db.session.commit()
+                added = added + 1
+    result = "Total items added are " + added
+    return result
 
 
 # endpoint to get user detail by id
