@@ -134,7 +134,7 @@ def add_news():
     detail_text = request.json['detail_text']
     url = request.json['url']
 
-    new_news = News(title, text, image, detail_text)
+    new_news = News(title, text, image, detail_text,url)
 
     db.session.add(new_news)
     db.session.commit()
@@ -183,7 +183,7 @@ def get_videos():
 def get():
     options = Options()
     options.headless = True
-    driver = webdriver.Chrome(options=options, executable_path=r'.\chromedriver.exe')
+    driver = webdriver.Chrome(options=options, executable_path=r'E:\New folder (2)\chromedriver.exe\chromedriver.exe')
     driver.get("https://www.msn.com/en-in/foodanddrink/foodnews")
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
