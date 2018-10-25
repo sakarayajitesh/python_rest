@@ -67,7 +67,7 @@
           <entry key="Procfile" value="37" />
           <entry key="Python Console" value="24" />
           <entry key="env" value="11" />
-          <entry key="py" value="7782" />
+          <entry key="py" value="7786" />
           <entry key="sql" value="37" />
           <entry key="txt" value="226" />
         </counts>
@@ -76,7 +76,7 @@
         <counts>
           <entry key=".env file" value="11" />
           <entry key="PLAIN_TEXT" value="263" />
-          <entry key="Python" value="7806" />
+          <entry key="Python" value="7810" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="289" column="60" lean-forward="true" selection-start-line="289" selection-start-column="60" selection-end-line="289" selection-end-column="60" />
+            <state relative-caret-position="152">
+              <caret line="185" column="99" selection-start-line="185" selection-start-column="99" selection-end-line="185" selection-end-column="99" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -440,7 +440,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540461483925</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="* added checking for present records and adding them if not present">
+      <created>1540462060662</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1540462060662</updated>
+    </task>
+    <task id="LOCAL-00024" summary="* added checking for present records and adding them if not present">
+      <created>1540462213015</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1540462213015</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -454,13 +468,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.25167784" />
       <window_info id="Structure" order="1" sideWeight="0.50427353" side_tool="true" weight="0.24496645" />
       <window_info id="Favorites" order="2" sideWeight="0.50427353" side_tool="true" weight="0.24496645" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4362606" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.10339943" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -563,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="289" column="60" lean-forward="true" selection-start-line="289" selection-start-column="60" selection-end-line="289" selection-end-column="60" />
+        <state relative-caret-position="152">
+          <caret line="185" column="99" selection-start-line="185" selection-start-column="99" selection-end-line="185" selection-end-column="99" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
