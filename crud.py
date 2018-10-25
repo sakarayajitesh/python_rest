@@ -183,7 +183,7 @@ def get_videos():
 def get():
     options = Options()
     options.headless = True
-    driver = webdriver.Chrome(chromedriver,options=options)
+    driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver.exe"), options=options)
     driver.get("https://www.msn.com/en-in/foodanddrink/foodnews")
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
@@ -287,7 +287,7 @@ def get_home():
 
 if __name__ == '__main__':
     #app.run(debug=True)
-    chromedriver = "E:/New folder (2)/chromedriver"
-    os.environ["webdriver.chrome.driver"] = chromedriver
+    # chromedriver = "E:/New folder (2)/chromedriver"
+    # os.environ["webdriver.chrome.driver"] = chromedriver
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
