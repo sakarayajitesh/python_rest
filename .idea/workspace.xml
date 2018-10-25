@@ -47,17 +47,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="5" />
+          <entry key="Procfile" value="6" />
           <entry key="env" value="1" />
           <entry key="procfile" value="1" />
           <entry key="py" value="9" />
           <entry key="sql" value="4" />
-          <entry key="txt" value="4" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="PLAIN_TEXT" value="13" />
           <entry key="Python" value="9" />
           <entry key="Scratch" value="4" />
         </counts>
@@ -67,7 +67,7 @@
           <entry key="Procfile" value="37" />
           <entry key="Python Console" value="24" />
           <entry key="env" value="11" />
-          <entry key="py" value="7842" />
+          <entry key="py" value="7866" />
           <entry key="sql" value="37" />
           <entry key="txt" value="226" />
         </counts>
@@ -76,7 +76,7 @@
         <counts>
           <entry key=".env file" value="11" />
           <entry key="PLAIN_TEXT" value="263" />
-          <entry key="Python" value="7866" />
+          <entry key="Python" value="7890" />
           <entry key="Scratch" value="37" />
         </counts>
       </usages-collector>
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="185" column="73" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
+            <state relative-caret-position="198">
+              <caret line="185" column="63" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -489,7 +489,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540462874276</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="* added checking for present records and adding them if not present">
+      <created>1540463103006</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1540463103006</updated>
+    </task>
+    <task id="LOCAL-00031" summary="* added checking for present records and adding them if not present">
+      <created>1540463210151</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1540463210151</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -505,12 +519,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.25167784" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4957265" visible="true" weight="0.25167784" />
       <window_info id="Structure" order="1" sideWeight="0.50427353" side_tool="true" weight="0.24496645" />
       <window_info id="Favorites" order="2" sideWeight="0.50427353" side_tool="true" weight="0.24496645" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.10339943" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.10339943" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -587,6 +601,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/opentable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -601,20 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opentable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="185" column="73" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
+        <state relative-caret-position="198">
+          <caret line="185" column="63" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
