@@ -287,6 +287,6 @@ def get_home():
 
 if __name__ == '__main__':
     #app.run(debug=True)
-    os.environ["PATH"] += os.pathsep + r'.\chromedriver.exe'
+    os.environ["PATH"] += os.pathsep + r'E:\New folder (2)\chromedriver.exe'
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
