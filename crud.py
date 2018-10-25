@@ -183,7 +183,7 @@ def get_videos():
 def get():
     options = Options()
     options.headless = True
-    driver = webdriver.Chrome( executable_path=r'./chromedriver.exe',options=options)
+    driver = webdriver.Chrome( executable_path=r'./chromedriver',options=options)
     driver.get("https://www.msn.com/en-in/foodanddrink/foodnews")
     html = driver.page_source
     soup = BeautifulSoup(html, 'lxml')
